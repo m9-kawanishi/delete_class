@@ -23,8 +23,6 @@ for file in os.listdir(directory):
     # 数値に変換
     annotation = [float(num) for num in annotation]
     annotation = np.array(annotation).reshape(-1,5)
-    count = 0
-  
         
     for i in range(annotation.shape[0]):
         try:
