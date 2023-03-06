@@ -32,7 +32,7 @@ for file in os.listdir(directory):
           if np.count_nonzero(annotation[i][0] == delete_num) > 0:
               annotation = np.delete(annotation, i, 0)
         except:
-          print("A")
+          pass
 
     np.savetxt(fileName, annotation, fmt ='%.6f')
 
