@@ -6,6 +6,9 @@ import os
 # ディレクトリ設定
 directory = "/content/a/"
 
+# 削除するクラスID
+delete_num = 8
+
 ################################################################
 
 
@@ -26,7 +29,7 @@ for file in os.listdir(directory):
         
     for i in range(annotation.shape[0]):
         try:
-          if np.count_nonzero(annotation[i][0] == 80) > 0:
+          if np.count_nonzero(annotation[i][0] == delete_num) > 0:
               annotation = np.delete(annotation, i, 0)
         except:
           print("A")
